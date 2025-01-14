@@ -21,7 +21,7 @@
 
     <div class="camenber">
         <div class="graph">donnés</div>
-        <div></div>
+        <canvas id="chartcam"></canvas>
     </div>
 
 
@@ -35,5 +35,25 @@
     </div>
 
 </body>
+
+<script>
+    
+    //camenber
+
+    let ctxcam = document.getElementById('chartcam');
+
+new Chart(ctxcam, { 
+    type: 'pie', 
+    data: { 
+        labels: ["femme", "homme"], 
+        datasets: [{ 
+            data: [230, 700],
+            backgroundColor: ['pink', 'blue',]  
+        }] 
+    },
+    options: {} 
+});
+
+</script>
 
 </html>
