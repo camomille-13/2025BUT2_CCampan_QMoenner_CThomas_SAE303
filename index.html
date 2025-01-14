@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <img src="" alt="">
+    </div>
+    <div class="contexte">
+        <h2>Contexte</h2>
+    </div>
+    <div>
+        <h2>Chiffres Clés</h2>
+    </div>
+
+    <div class="chiffresClés">
+
+        <div class="camembert">
+            <canvas id="chartcam"></canvas>
+        </div>
+
+        <div class="donnees">
+            <div class="context-title">2020</div>
+
+            <div  id="pourcentages"> 
+                <div class="pourcentage">
+                    <div class="context-title">27%</div>
+                </div>
+        
+                <div class="pourcentage">
+                    <div class="context-title">73%</div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    
+    <h1>Mais Encore</h1>
+    <div class="map">
+
+    </div>
+    <div class="graph">
+        <div></div>
+        <div></div>
+    </div>
+
+</body>
+
+<script>
+
+    //camembert
+
+    let ctxcam = document.getElementById('chartcam');
+
+    new Chart(ctxcam, {
+        type: 'pie',
+        data: {
+            labels: ["femme", "homme"],
+            datasets: [{
+                data: [270, 730],
+                backgroundColor: ['pink', 'blue',]
+            }]
+        },
+        options: {}
+    });
+
+</script>
+
+</html>
