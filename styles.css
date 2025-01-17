@@ -9,6 +9,12 @@ h3{
     height: 10%;
     text-align: center;
     margin-bottom : 0;
+    border-bottom-left-radius:0 ;
+    border-bottom-right-radius:0 ;
+    color : white;
+    padding: 8px;
+    padding-left : 25px; 
+    padding-right : 25px;
 }
 
 #contexte{
@@ -17,13 +23,16 @@ h3{
     text-align: center;
     height: 10%;
     width: 100%;
+
 }
 
 .context-box {
     background-color: #F3C2C2;
     border-radius: 8px;
-    width: 400px;
+    width: 1100px;
     padding: 10px 0px 0px 10px;
+    border-top-left-radius:0 ;
+
 }
 
 .context-box h2 {
