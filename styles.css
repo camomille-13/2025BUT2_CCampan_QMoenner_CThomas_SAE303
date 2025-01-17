@@ -125,7 +125,7 @@ h1 {
    
 }
 img{
-    width : 70%;
+    width : 100%;
 }
 
 .image{
@@ -137,7 +137,6 @@ img{
     border-bottom-right-radius: 100%;
     display: flex;
     justify-content: center;
-    width: 70%;
 }
 
 .image img{
