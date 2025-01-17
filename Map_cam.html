@@ -71,7 +71,7 @@
       // Crée un mapping entre les pays et leurs valeurs
       const countryData = {};
       parsedData.forEach(row => {
-        if (row.Entity && row.Year === "2022") { // Filtre par l'année 2022
+        if (row.Entity && row.Year === "2016") { // Filtre par l'année 2022
           countryData[row.Entity] = parseFloat(row["Mean years of schooling (ISCED 1 or higher), population 25+ years, adjusted gender parity index (GPIA)"]) || 0;
         }
       });
@@ -86,7 +86,8 @@
           label: 'Education Gender Parity Index (2022)',
           data: countries.map(country => ({
             feature: country,
-            value: countryData[country.properties.name] || 0 // Valeur associée au pays
+            value: countryData[country.properties.name] || 0 ,// Valeur associée au pays
+            
           })),
         }]
       };
@@ -98,15 +99,22 @@
         options: {
           showOutline: true,
           showGraticule: true,
+          
           plugins: {
             legend: { display: false },
           },
+          
           scales: {
             projection: {
               axis: 'x',
               projection: 'equalEarth',
+
+
             }
-          }
+          },
+          color: {
+        interpolate: (value) => 'rgba(255, 182, 193, 1)', // Applique une couleur rose pour tous les pays
+      },
         }
       };
 
