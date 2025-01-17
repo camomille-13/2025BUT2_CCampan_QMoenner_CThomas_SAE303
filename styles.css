@@ -1,3 +1,7 @@
+body{
+    background-color: #F8F0F0;
+}
+
 h3{
     background-color: #ffecec;
     border-radius: 8px;
@@ -101,5 +105,8 @@ h1 {
 
 
 .graph{
+    background-color: #87B1C6;
+    padding-top: 5%;
+    padding-right : 0;
    
 }
