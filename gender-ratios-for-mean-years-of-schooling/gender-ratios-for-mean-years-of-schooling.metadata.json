@@ -1,0 +1,36 @@
+{
+  "chart": {
+    "title": "Average years of schooling, adjusted gender parity index",
+    "subtitle": "An [adjusted gender parity index](#dod:adjusted-gpi) of 1 indicates equal average years of schooling between men and women. Values below 1 favor men, and above 1 favor women.",
+    "note": "",
+    "citation": "UNESCO Institute for Statistics (2024)",
+    "originalChartUrl": "https://ourworldindata.org/grapher/gender-ratios-for-mean-years-of-schooling?v=1&csvType=full&useColumnShortNames=false",
+    "selection": [
+      "Czechia",
+      "Somalia",
+      "United Kingdom",
+      "Afghanistan",
+      "Lebanon"
+    ]
+  },
+  "columns": {
+    "Mean years of schooling (ISCED 1 or higher), population 25+ years, adjusted gender parity index (GPIA)": {
+      "titleShort": "Mean years of schooling (ISCED 1 or higher), population 25+ years, adjusted gender parity index (GPIA)",
+      "titleLong": "Mean years of schooling (ISCED 1 or higher), population 25+ years, adjusted gender parity index (GPIA)",
+      "descriptionKey": [],
+      "shortUnit": "",
+      "unit": "index",
+      "timespan": "1970-2023",
+      "type": "Numeric",
+      "owidVariableId": 942404,
+      "shortName": "mean_years_of_schooling__isced_1_or_higher__population_25plus_years__adjusted_gender_parity_index__gpia",
+      "lastUpdated": "2024-06-16",
+      "nextUpdate": "2025-06-16",
+      "citationShort": "UNESCO Institute for Statistics (2024) – processed by Our World in Data",
+      "citationLong": "UNESCO Institute for Statistics (2024) – processed by Our World in Data. “Mean years of schooling (ISCED 1 or higher), population 25+ years, adjusted gender parity index (GPIA)” [dataset]. UNESCO Institute for Statistics, “UNESCO Institute for Statistics (UIS) - Education” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/942404.metadata.json"
+    }
+  },
+  "dateDownloaded": "2025-01-16",
+  "activeFilters": {}
+}
