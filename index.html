@@ -85,23 +85,7 @@
             }]
         },
         options: {
-            plugins: {
-                tooltip: {
-                    enabled: true, // Active les infobulles
-                }
-            },
-            hover: {
-                onHover: function (event, chartElement) {
-                    const canvas = event.native.target; // Récupère l'élément canvas
-                    canvas.style.cursor = chartElement[0] ? 'pointer' : 'default'; // Change le curseur
-                }
-            },
-            responsive: true,
-            animation: {
-                onComplete: () => {
-                    // Permet d'activer les animations au survol si nécessaires
-                }
-            },
+            
         }
     });
 
