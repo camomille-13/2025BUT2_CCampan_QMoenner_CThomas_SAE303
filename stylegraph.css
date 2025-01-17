@@ -3,7 +3,7 @@ select {
     padding:20px;
     border : none;
     border-radius: 5px;
-    background-color: #F3C2C2;
+    background-color: #FC9797;
     color: #FFFFFF;
     outline: none;
     margin-bottom: 10px;
@@ -14,7 +14,7 @@ select {
 }
 
 select:hover {
-    background-color: #87B1C6;
+    background-color: #005B88;
 }
 
 option {
@@ -25,11 +25,12 @@ option {
 body {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     align-items: flex-start;
     gap: 20px; 
     padding: 20px;
     margin: 0;
-    background-color: #FFFFFF;
+    background-color: #87B1C6;
     font-family: Arial, sans-serif;
 }
 
@@ -54,9 +55,18 @@ canvas{
     max-width: 300px; 
 }
 
+.item{
+    display: flex; 
+    flex-direction: row;
+}
+
 .filters-container select {
     appearance:none;
     -webkit-appearance: none;
     -moz-appearance: none;
 
+}
+
+h2{
+    color : white;
 }
