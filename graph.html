@@ -13,36 +13,37 @@
 </head>
 
 <body>
-
+    <div class="disparite">
     <h2>Evolution dans le temps de la répartition des sexes selon le niveau d’étude.</h2>
-<div class="item">
+    <div class="item">
         <canvas id="chart"></canvas>
-    <div class="filters-container">
-        <!-- Filtre par géographie-->
+        <div class="filters-container">
+            <!-- Filtre par géographie-->
 
-        <select name="datasets" id="data-select">
-            <option value="0">World</option>
-            <option value="1">France</option>
-            <option value="2">Afghanistan</option>
-            <option value="3">Mexique</option>
-        </select>
+            <select name="datasets" id="data-select">
+                <option value="0">World</option>
+                <option value="1">France</option>
+                <option value="2">Afghanistan</option>
+                <option value="3">Mexique</option>
+            </select>
 
-        <!-- Filtre par sexe -->
-        <label for="gender-select"></label>
-        <select name="gender" id="gender-select">
-            <option value="all">Sexe</option>
-            <option value="femme">Femme</option>
-            <option value="homme">Homme</option>
-        </select>
+            <!-- Filtre par sexe -->
+            <label for="gender-select"></label>
+            <select name="gender" id="gender-select">
+                <option value="all">Sexe</option>
+                <option value="femme">Femme</option>
+                <option value="homme">Homme</option>
+            </select>
 
-        <!-- Filtre par niveau d'étude -->
-        <label for="level-select"></label>
-        <select name="level" id="level-select">
-            <option value="all">Niveau d'étude</option>
-            <option value="sup">Études supérieures</option>
-            <option value="lycee">Lycée</option>
-            <option value="primaire">Primaire</option>
-        </select>
+            <!-- Filtre par niveau d'étude -->
+            <label for="level-select"></label>
+            <select name="level" id="level-select">
+                <option value="all">Niveau d'étude</option>
+                <option value="sup">Études supérieures</option>
+                <option value="lycee">Lycée</option>
+                <option value="primaire">Primaire</option>
+            </select>
+        </div>
     </div>
 </div>
 </body>

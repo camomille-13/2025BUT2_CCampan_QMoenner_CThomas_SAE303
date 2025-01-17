@@ -57,13 +57,18 @@
 
     <h1>Mais Encore</h1>
     <div class="map">
-
+        <div class="Mais Encore">
+            <h4>Contexte</h4>
+            <div class="context-box-Mais-encore">
+                <p id="contexte">Au fil de ces dernières années, l'accès à l'éducation des filles n'a cessé d'évoluer</p>
+            </div>
+        </div>
     </div>
     <div class="graph">
         <div>
             <object type="text/html" data="graph.html" width="1200px" height="700px"></object>
         </div>
-     
+
     </div>
 
 </body>
@@ -79,31 +84,16 @@
         data: {
             labels: ["femme", "homme"],
             datasets: [{
-                data: [270, 730],
-                backgroundColor: ['#F3C2C2', '#87B1C6',]
-
+                data: [27, 73],
+                backgroundColor: ['#FC9797', '#4A9DC7',],
+                borderWidth : 0,
+                hoverBackgroundColor: ['#D86060', '#005B88',],
             }]
         },
-        options: {
-            plugins: {
-                tooltip: {
-                    enabled: true, // Active les infobulles
-                }
-            },
-            hover: {
-                onHover: function (event, chartElement) {
-                    const canvas = event.native.target; // Récupère l'élément canvas
-                    canvas.style.cursor = chartElement[0] ? 'pointer' : 'default'; // Change le curseur
-                }
-            },
-            responsive: true,
-            animation: {
-                onComplete: () => {
-                    // Permet d'activer les animations au survol si nécessaires
-                }
-            },
-        }
+
     });
+
+
 
 </script>
 
