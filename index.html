@@ -8,7 +8,8 @@
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script
-        src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+        src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js">
+        </script>
 </head>
 
 <body>
@@ -80,9 +81,28 @@
             datasets: [{
                 data: [270, 730],
                 backgroundColor: ['#F3C2C2', '#87B1C6',]
+
             }]
         },
-        options: {}
+        options: {
+            plugins: {
+                tooltip: {
+                    enabled: true, // Active les infobulles
+                }
+            },
+            hover: {
+                onHover: function (event, chartElement) {
+                    const canvas = event.native.target; // Récupère l'élément canvas
+                    canvas.style.cursor = chartElement[0] ? 'pointer' : 'default'; // Change le curseur
+                }
+            },
+            responsive: true,
+            animation: {
+                onComplete: () => {
+                    // Permet d'activer les animations au survol si nécessaires
+                }
+            },
+        }
     });
 
 </script>
