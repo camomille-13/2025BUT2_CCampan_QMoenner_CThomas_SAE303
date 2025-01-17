@@ -77,6 +77,11 @@ h3{
     font-weight: bold;
     font-size: 30px;
 
+    font-size: 20px;
+    width: 5%;
+    margin-left: 2%;
+    display : flex; 
+    justify-content: space-between;
 }
 
 .context-title {
@@ -97,4 +102,9 @@ h1 {
     height: 10%;
     border-radius:0 40px 40px 0;
     text-align: center;
+}
+
+
+.graph{
+   
 }
