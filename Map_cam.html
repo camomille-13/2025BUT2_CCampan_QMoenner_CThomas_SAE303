@@ -71,7 +71,7 @@
       // Crée un mapping entre les pays et leurs valeurs
       const countryData = {};
       parsedData.forEach(row => {
-        if (row.Entity && row.Year === "2020") { // Filtre par l'année 2020
+        if (row.Entity && row.Year === "2022") { // Filtre par l'année 2022
           countryData[row.Entity] = parseFloat(row["Mean years of schooling (ISCED 1 or higher), population 25+ years, adjusted gender parity index (GPIA)"]) || 0;
         }
       });
@@ -95,7 +95,6 @@
       const config = {
         type: 'choropleth',
         data,
-        
         options: {
           showOutline: true,
           showGraticule: true,
@@ -107,14 +106,8 @@
               axis: 'x',
               projection: 'equalEarth',
             }
-          },
-color: {
-  interpolate: (v) => (v < 0.5 ? 'green' : 'red'),
-}
-          
-        },
-        
-       
+          }
+        }
       };
 
       // Instancie le graphique
