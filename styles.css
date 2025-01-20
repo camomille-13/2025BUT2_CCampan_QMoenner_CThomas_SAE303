@@ -72,8 +72,10 @@ h3 {
     width: 30%;
 }
 
-h4{
+h5{
     background-color: none;
+    color: white;
+    font-size : 1rem;
 }
 
 #chartcam {
