@@ -14,26 +14,14 @@
       font-family: sans-serif;
     }
 
-    .chartMenu {
-      width: 100vw;
-      height: 40px;
-      background: #1A1A1A;
-      color: rgba(54, 162, 235, 1);
-    }
+   
 
     .chartMenu p {
       padding: 10px;
       font-size: 20px;
     }
 
-    .chartCard {
-      width: 100vw;
-      height: calc(100vh - 40px);
-      background: rgba(54, 162, 235, 0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    
 
     .chartBox {
       width: 700px;
@@ -46,9 +34,7 @@
 </head>
 
 <body>
-  <div class="chartMenu">
-    <p>Choropleth Chart Example</p>
-  </div>
+  
   <div class="chartCard">
     <div class="chartBox">
       <canvas id="myChart"></canvas>
@@ -71,7 +57,7 @@
       // Crée un mapping entre les pays et leurs valeurs
       const countryData = {};
       parsedData.forEach(row => {
-        if (row.Entity && row.Year === "2016") { // Filtre par l'année 2022
+        if (row.Entity && row.Year === "2020") { // Filtre par l'année 2022
           countryData[row.Entity] = parseFloat(row["Mean years of schooling (ISCED 1 or higher), population 25+ years, adjusted gender parity index (GPIA)"]) || 0;
         }
       });
@@ -83,7 +69,7 @@
       const data = {
         labels: countries.map(country => country.properties.name),
         datasets: [{
-          label: 'Education Gender Parity Index (2022)',
+          label: 'Education Gender Parity Index (2020)',
           data: countries.map(country => ({
             feature: country,
             value: countryData[country.properties.name] || 0 ,// Valeur associée au pays
@@ -92,7 +78,7 @@
         }]
       };
 
-      // Configuration du graphique
+      // Config
       const config = {
         type: 'choropleth',
         data,
@@ -108,13 +94,25 @@
             projection: {
               axis: 'x',
               projection: 'equalEarth',
+            },
 
-
-            }
+            color: {
+              axis: 'x',
+              interpolate: (v) => {
+                
+                if (v < 0.4) return '#4A9DC7';
+                if (v < 0.6) return '#F8CBB5';
+                if (v < 0.8) return '#FC9797';
+                
+              },
+              legend: {
+                position: 'bottom-right',
+                align: 'right',
+              },
+            },
+            
           },
-          color: {
-        interpolate: (value) => 'rgba(255, 182, 193, 1)', // Applique une couleur rose pour tous les pays
-      },
+         
         }
       };
 
