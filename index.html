@@ -27,38 +27,40 @@
         </div>
     </div>
     <div>
-        <h2>Chiffres Clés</h2>
+        <h2>Chiffres Clés: Ecart de genre dans les études supérieures en Afghanistan</h2>
     </div>
 
     <div class="chiffresClés">
 
-            <div class="camembert">
-                <canvas id="chartcam"></canvas>
-            </div>
+        <div class="camembert">
+            <canvas id="chartcam"></canvas>
+        </div>
 
-            <div class="donnees">
-                <div class="context-title">2020</div>
+        <div class="donnees">
+            <div class="context-title">2020</div>
 
-                <div id="pourcentages">
-                    <div class="pourcentage">
-                        <span class="test2">
-                            <span class="defaut">63%</span><span class="survol">63% des adultes analphabètes dans le monde sont des femmes.
+            <div id="pourcentages">
+                <div class="pourcentage">
+                    <span class="test2">
+                        <span class="defaut">63%</span><span class="survol">63% des adultes analphabètes dans le monde
+                            sont des femmes.
 
-                            </span>
                         </span>
-                    </div>
-
-                    <div class="pourcentage">
-                        <span class="test3">
-                            <span class="defaut">59%</span><span class="survol">59% des enfants arrêtent leurs études avant le lycée dans les pays à revenu faible.
-
-                            </span>
-                        </span>
-                    </div>
+                    </span>
                 </div>
 
+                <div class="pourcentage">
+                    <span class="test3">
+                        <span class="defaut">59%</span><span class="survol">59% des enfants arrêtent leurs études avant
+                            le lycée dans les pays à revenu faible.
+
+                        </span>
+                    </span>
+                </div>
             </div>
+
         </div>
+    </div>
     </div>
 
 
@@ -70,18 +72,20 @@
     <div class="map">
         <h3>Dominance de sexe dans les études supérieures par pays</h3>
         <div class="info_map">
-            <p class="map">Cette map montre que l’éducation pour les hommes est plus favorisé que pour les femmes et qu’il n’y a pas
+            <p class="map">Cette map montre que l’éducation pour les hommes est plus favorisé que pour les femmes et
+                qu’il n’y a pas
                 beaucoup de pays dont la parité est égale.
-    
-                Pour comprendre ce graphique, les pays en bleu sont ceux qui favorisent les hommes, les pays rose sont ceux
-                qui favorisent les femmes et les pays orange ceux qui ont une parité homme femme.</p>
-        <div class="map_monde">
-            
-            <object type="text/html" data="Map_cam.html" width="800px" height="300px"></object>
 
+                Pour comprendre ce graphique, les pays en bleu sont ceux qui favorisent les hommes, les pays rose sont
+                ceux
+                qui favorisent les femmes et les pays orange ceux qui ont une parité homme femme.</p>
+            <div class="map_monde">
+
+                <object type="text/html" data="Map_cam.html" width="800px" height="300px"></object>
+
+            </div>
         </div>
     </div>
-</div>
     <div class="graph">
         <div>
             <object type="text/html" data="graph.html" width="1200px" height="700px"></object>
@@ -105,16 +109,19 @@
                 data: [27, 73],
                 backgroundColor: ['#FC9797', '#4A9DC7',],
                 borderWidth: 0,
-                hoverBackgroundColor: ['#D86060', '#005B88',],    
+                hoverBackgroundColor: ['#D86060', '#005B88',],
             }]
         },
 
-        options:{
-            plugins:{
-                legend:{
+        options: {
+            plugins: {
+                legend: {
                     display: true,
-                    labels:{
+                    labels: {
                         color: ['#ffffff'],
+                        font: {
+                            size: 25
+                        }
                     }
                 }
             }
