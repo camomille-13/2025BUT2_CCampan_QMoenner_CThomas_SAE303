@@ -1,7 +1,7 @@
 body {
     background-color: #F8F0F0;
-    margin : 0 ; 
-    padding : 0;
+    margin: 0;
+    padding: 0;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -28,12 +28,12 @@ h3 {
     height: 10%;
     width: 100%;
     display: flex;
-    padding : 2%;
+    padding: 2%;
 }
 
-.contexte{
+.contexte {
     display: flex;
-    
+
 }
 
 .context-box {
@@ -72,8 +72,9 @@ h3 {
     width: 30%;
 }
 
-#chartcam{
-    margin-top : 10%;
+#chartcam {
+    margin-top: 10%;
+    color: white;
 }
 
 .donnees {
@@ -103,8 +104,37 @@ h3 {
     margin-top: 5%;
     font-weight: bold;
     font-size: 60px;
-    padding-top: 8%;
-    padding-bottom: 8%;
+    padding-top: 17%;
+    padding-bottom: 19%;
+}
+
+.test2 .survol {
+    display: none;
+    margin-top: 5%;
+}
+
+.test2:hover .defaut {
+    display: none;
+    line-height: 0.5;
+}
+
+.test2:hover .survol {
+    display: block;
+    font-size: 20px;
+}
+
+.test3 .survol {
+    display: none;
+    margin-top: 5%;
+}
+
+.test3:hover .defaut {
+    display: none;
+}
+
+.test3:hover .survol {
+    display: block;
+    font-size: 20px;
 }
 
 .context-title {
@@ -168,7 +198,7 @@ img {
     background-color: white;
     border-radius: 8px;
     text-align: left;
-    padding-left : 3%;
+    padding-left: 3%;
     height: 10%;
     width: 100%;
 
@@ -179,10 +209,10 @@ img {
     display: flex;
     flex-direction: column;
     margin-left: 11%;
-    width : 90%;
+    width: 90%;
 }
 
-.context-box{
+.context-box {
     padding-right: 4%;
 
 }
@@ -235,5 +265,5 @@ h4 {
 
 h2 {
     margin-top: 5%;
-    margin-left : 2%;
+    margin-left: 2%;
 }
