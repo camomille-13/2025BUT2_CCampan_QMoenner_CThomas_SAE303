@@ -30,6 +30,12 @@ h3{
     display: flex;
 }
 
+.contexte{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .context-box {
     background-color: #F3C2C2;
     border-radius: 8px;
