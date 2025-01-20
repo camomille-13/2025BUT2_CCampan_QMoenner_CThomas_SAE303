@@ -32,25 +32,35 @@
 
     <div class="chiffresClés">
 
-        <div class="camembert">
-            <canvas id="chartcam"></canvas>
-        </div>
-
-        <div class="donnees">
-            <div class="context-title">2020</div>
-
-            <div id="pourcentages">
-                <div class="pourcentage">
-                    <p>27%
-                    <p>
+            <div class="camembert">
+                <div class="titre_camembert">
+                    <h4>Ecart de genre dans les études supérieures en Afghanistan</h4>
                 </div>
-
-                <div class="pourcentage">
-                    <p>73%
-                    <p>
-                </div>
+                   <canvas id="chartcam"></canvas>
             </div>
 
+            <div class="donnees">
+                <div class="context-title">2020</div>
+
+                <div id="pourcentages">
+                    <div class="pourcentage">
+                        <span class="test2">
+                            <span class="defaut">63%</span><span class="survol">63% des adultes analphabètes dans le monde sont des femmes.
+
+                            </span>
+                        </span>
+                    </div>
+
+                    <div class="pourcentage">
+                        <span class="test3">
+                            <span class="defaut">59%</span><span class="survol">59% des enfants arrêtent leurs études avant le lycée dans les pays à revenu faible.
+
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 
@@ -98,8 +108,19 @@
                 data: [27, 73],
                 backgroundColor: ['#FC9797', '#4A9DC7',],
                 borderWidth: 0,
-                hoverBackgroundColor: ['#D86060', '#005B88',],
+                hoverBackgroundColor: ['#D86060', '#005B88',],    
             }]
+        },
+
+        options:{
+            plugins:{
+                legend:{
+                    display: true,
+                    labels:{
+                        color: ['#ffffff'],
+                    }
+                }
+            }
         },
 
     });
