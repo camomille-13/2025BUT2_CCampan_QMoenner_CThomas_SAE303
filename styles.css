@@ -245,7 +245,7 @@ h2 {
     background-color: #F3C2C2;
     border-radius: 20px;
     width : 85%;
-    height: 10%;
+    height: 70%;
     
     margin :auto;
 }
@@ -254,8 +254,8 @@ h2 {
     
     width : 98%;
     border-radius: 20px;
-    padding-top: 1%;
-  
+    padding-top: 4%;
+  padding-bottom: 4%;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     
