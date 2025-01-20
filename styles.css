@@ -246,16 +246,16 @@ h2 {
     border-radius: 20px;
     width : 85%;
     height: 10%;
-    text-align: center;
+    
     margin :auto;
 }
 
 .map_monde{
-    background-color: white;
+    
     width : 98%;
     border-radius: 20px;
     padding-top: 1%;
-    margin : auto; 
+  
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     
@@ -275,12 +275,12 @@ h2 {
     border-radius: 20px;
     padding-top: 1%;
     
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    /*/ border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;*/
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    
+    margin: 0%;
 }
 
 p.map{
