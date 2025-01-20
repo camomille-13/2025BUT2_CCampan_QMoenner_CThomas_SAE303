@@ -265,5 +265,58 @@ h4 {
 
 h2 {
     margin-top: 5%;
-    margin-left: 2%;
+    margin-left : 2%;
+}
+
+
+/* map*/
+
+.map{
+    background-color: #F3C2C2;
+    border-radius: 20px;
+    width : 85%;
+    height: 70%;
+    
+    margin :auto;
+}
+
+.map_monde{
+    
+    width : 98%;
+    border-radius: 20px;
+    padding-top: 4%;
+  padding-bottom: 4%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+
+}
+
+.map h3{
+    width : 80%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    margin : auto;
+}
+
+.info_map{
+    background-color: white;
+    width : 98%;
+    border-radius: 20px;
+    padding-top: 1%;
+    
+    /*/ border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   
+}
+
+p.map{
+   margin-left: 10%;
+    background-color: white;
+    padding-right: 10%;
+    text-align: center;
+    width: 700px;
 }
