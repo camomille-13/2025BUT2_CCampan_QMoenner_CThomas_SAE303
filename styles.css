@@ -336,3 +336,11 @@ p.map{
     font-weight: bold;
     line-height: 200%;
 }
+
+
+.sources a{
+    text-decoration: none;
+    color : #535353;
+    padding : 3% ;
+}
+
