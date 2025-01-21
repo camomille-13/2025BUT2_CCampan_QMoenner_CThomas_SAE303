@@ -55,7 +55,7 @@
     [[0.0, 0.1, 0.6, 19.4, 48.5], [0.1, 0.1, 0.4, 0.4, 43.6, 42.9], [, , , , 43.6, 73.6], [, , , , 46.8, 67.1], [0.7, 3, 27.1, 61.5, ,], [5.5, 20.3, 42.6, 63.8, ,]],
     ]
 
-    const CATEGORY_MAP = {
+    const CATEGORIE = {
         femme: {
             sup: 0,
             lycee: 2,
@@ -68,7 +68,7 @@
         }
     };
 
-    const ORIGINAL_LABELS = [
+    const LABELS = [
         'femme en études supérieures',
         'homme en études supérieures',
         'femme au lycée',
@@ -77,7 +77,7 @@
         'garçon en primaire'
     ];
 
-    const ORIGINAL_COLORS = [
+    const COULEURS = [
         "#D86060", // femme en études supérieures
         "#005B88", // homme en études supérieures
         "#FC9797", // femme au lycée
@@ -138,9 +138,9 @@
     const index = parseInt(datasetIndex);
     chart.data.datasets.forEach((dataset, i) => {
         dataset.data = DATASETS[index][i];
-        dataset.label = ORIGINAL_LABELS[i]; // Réutilise le label d'origine
-        dataset.borderColor = ORIGINAL_COLORS[i]; // Réutilise la couleur d'origine
-        dataset.backgroundColor = ORIGINAL_COLORS[i] + "33"; // Couleur transparente pour remplissage (optionnel)
+        dataset.label = LABELS[i]; // Réutilise le label d'origine
+        dataset.borderColor = COULEURS[i]; // Réutilise la couleur d'origine
+        dataset.backgroundColor = COULEURS[i] + "33"; // Couleur transparente pour remplissage (optionnel)
     });
     chart.update();
 }
@@ -155,39 +155,39 @@
     if (gender === "all" && level === "all") {
         DATASETS[datasetIndex].forEach((data, i) => {
             chart.data.datasets.push({
-                label: ORIGINAL_LABELS[i], // Réutilise le label d'origine
+                label: LABELS[i], // Réutilise le label d'origine
                 data: data,
-                borderColor: ORIGINAL_COLORS[i], // Réutilise la couleur d'origine
-                backgroundColor: ORIGINAL_COLORS[i] + "33" // Couleur transparente pour le remplissage (optionnel)
+                borderColor: COULEURS[i], // Réutilise la couleur d'origine
+                backgroundColor: COULEURS[i] + "33" // Couleur transparente pour le remplissage (optionnel)
             });
         });
     } else if (gender === "all") {
-        Object.keys(CATEGORY_MAP).forEach((g) => {
-            const index = CATEGORY_MAP[g][level];
+        Object.keys(CATEGORIE).forEach((g) => {
+            const index = CATEGORIE[g][level];
             chart.data.datasets.push({
-                label: ORIGINAL_LABELS[index], // Réutilise le label d'origine
+                label: LABELS[index], // Réutilise le label d'origine
                 data: DATASETS[datasetIndex][index],
-                borderColor: ORIGINAL_COLORS[index], // Réutilise la couleur d'origine
-                backgroundColor: ORIGINAL_COLORS[index] + "33"
+                borderColor: COULEURS[index], // Réutilise la couleur d'origine
+                backgroundColor: COULEURS[index] + "33"
             });
         });
     } else if (level === "all") {
-        Object.keys(CATEGORY_MAP[gender]).forEach((l) => {
-            const index = CATEGORY_MAP[gender][l];
+        Object.keys(CATEGORIE[gender]).forEach((l) => {
+            const index = CATEGORIE[gender][l];
             chart.data.datasets.push({
-                label: ORIGINAL_LABELS[index], // Réutilise le label d'origine
+                label: LABELS[index], // Réutilise le label d'origine
                 data: DATASETS[datasetIndex][index],
-                borderColor: ORIGINAL_COLORS[index], // Réutilise la couleur d'origine
-                backgroundColor: ORIGINAL_COLORS[index] + "33"
+                borderColor: COULEURS[index], // Réutilise la couleur d'origine
+                backgroundColor: COULEURS[index] + "33"
             });
         });
     } else {
-        const index = CATEGORY_MAP[gender][level];
+        const index = CATEGORIE[gender][level];
         chart.data.datasets.push({
-            label: ORIGINAL_LABELS[index], // Réutilise le label d'origine
+            label: LABELS[index], // Réutilise le label d'origine
             data: DATASETS[datasetIndex][index],
-            borderColor: ORIGINAL_COLORS[index], // Réutilise la couleur d'origine
-            backgroundColor: ORIGINAL_COLORS[index] + "33"
+            borderColor: COULEURS[index], // Réutilise la couleur d'origine
+            backgroundColor: COULEURS[index] + "33"
         });
     }
 
