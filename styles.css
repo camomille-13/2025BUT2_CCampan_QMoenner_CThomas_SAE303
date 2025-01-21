@@ -326,10 +326,8 @@ p.map{
    margin-left: 10%;
     background-color: white;
     padding-right: 10%;
-<<<<<<< HEAD
-    
-    
-=======
-
->>>>>>> 6360decc2890f2256298a02c0a1866a185acbe87
+    font-size: 1.1rem;
+    color: #D86060;
+    font-weight: bold;
+    line-height: 200%;
 }
