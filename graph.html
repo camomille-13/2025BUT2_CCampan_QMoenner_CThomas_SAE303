@@ -14,38 +14,38 @@
 
 <body>
     <div class="disparite">
-    <h2>Evolution dans le temps de la répartition des sexes selon le niveau d’étude.</h2>
-    <div class="item">
-        <canvas id="chart"></canvas>
-        <div class="filters-container">
-            <!-- Filtre par géographie-->
+        <h2>Evolution dans le temps de la répartition des sexes selon le niveau d’étude.</h2>
+        <div class="item">
+            <canvas id="chart"></canvas>
+            <div class="filters-container">
+                <!-- Filtre par géographie-->
 
-            <select name="datasets" id="data-select">
-                <option value="0">World</option>
-                <option value="1">France</option>
-                <option value="2">Afghanistan</option>
-                <option value="3">Mexique</option>
-            </select>
+                <select name="datasets" id="data-select">
+                    <option value="0">World</option>
+                    <option value="1">France</option>
+                    <option value="2">Afghanistan</option>
+                    <option value="3">Mexique</option>
+                </select>
 
-            <!-- Filtre par sexe -->
-            <label for="gender-select"></label>
-            <select name="gender" id="gender-select">
-                <option value="all">Sexe</option>
-                <option value="femme">Femme</option>
-                <option value="homme">Homme</option>
-            </select>
+                <!-- Filtre par sexe -->
+                <label for="gender-select"></label>
+                <select name="gender" id="gender-select">
+                    <option value="all">Sexe</option>
+                    <option value="femme">Femme</option>
+                    <option value="homme">Homme</option>
+                </select>
 
-            <!-- Filtre par niveau d'étude -->
-            <label for="level-select"></label>
-            <select name="level" id="level-select">
-                <option value="all">Niveau d'étude</option>
-                <option value="sup">Études supérieures</option>
-                <option value="lycee">Lycée</option>
-                <option value="primaire">Primaire</option>
-            </select>
+                <!-- Filtre par niveau d'étude -->
+                <label for="level-select"></label>
+                <select name="level" id="level-select">
+                    <option value="all">Niveau d'étude</option>
+                    <option value="sup">Études supérieures</option>
+                    <option value="lycee">Lycée</option>
+                    <option value="primaire">Primaire</option>
+                </select>
+            </div>
         </div>
     </div>
-</div>
 </body>
 <script>
 
@@ -67,6 +67,24 @@
             primaire: 5
         }
     };
+
+    const ORIGINAL_LABELS = [
+        'femme en études supérieures',
+        'homme en études supérieures',
+        'femme au lycée',
+        'homme au lycée',
+        'fille en primaire',
+        'garçon en primaire'
+    ];
+
+    const ORIGINAL_COLORS = [
+        "#D86060", // femme en études supérieures
+        "#005B88", // homme en études supérieures
+        "#FC9797", // femme au lycée
+        "#4A9DC7", // homme au lycée
+        "#F3C2C2", // fille en primaire
+        "#87B1C6"  // garçon en primaire
+    ];
 
     let ctx = document.getElementById('chart');
 
@@ -105,7 +123,7 @@
                 data: DATASETS[0][5],
                 borderColor: "#87B1C6"
             },
-        ]
+            ]
         },
         options: {
             scale: { min: 0, max: 100 },
@@ -117,67 +135,65 @@
 
     /*dataset*/
     function handleDataChange(chart, datasetIndex) {
-        const index = parseInt(datasetIndex);
-        chart.data.datasets.forEach((dataset, i) => {
-            dataset.data = DATASETS[index][i];
-        });
-        chart.update();
-    }
-
-    const datasetSel = document.getElementById("data-select");
-    datasetSel.onchange = () => {
-        handleDataChange(chart, datasetSel.value);
-    };
-
-
+    const index = parseInt(datasetIndex);
+    chart.data.datasets.forEach((dataset, i) => {
+        dataset.data = DATASETS[index][i];
+        dataset.label = ORIGINAL_LABELS[i]; // Réutilise le label d'origine
+        dataset.borderColor = ORIGINAL_COLORS[i]; // Réutilise la couleur d'origine
+        dataset.backgroundColor = ORIGINAL_COLORS[i] + "33"; // Couleur transparente pour remplissage (optionnel)
+    });
+    chart.update();
+}
     // Dataset et sexe et géographie
     function updateChart() {
+    const datasetIndex = parseInt(document.getElementById("data-select").value);
+    const gender = document.getElementById("gender-select").value;
+    const level = document.getElementById("level-select").value;
 
-        const datasetIndex = parseInt(document.getElementById("data-select").value);
-        const gender = document.getElementById("gender-select").value;
-        const level = document.getElementById("level-select").value;
+    chart.data.datasets = [];
 
-        chart.data.datasets = [];
-
-
-        if (gender === "all" && level === "all") {
-            DATASETS[datasetIndex].forEach((data, i) => {
-                chart.data.datasets.push({
-                    label: Object.keys(CATEGORY_MAP).find(key => Object.values(CATEGORY_MAP[key]).includes(i)),
-                    data: data,
-                    borderColor: i % 2 === 0 ? "#D86060" : "#005B88"
-                });
-            });
-        } else if (gender === "all") {
-            Object.keys(CATEGORY_MAP).forEach((g) => {
-                const index = CATEGORY_MAP[g][level];
-                chart.data.datasets.push({
-                    label: `${g} - ${level}`,
-                    data: DATASETS[datasetIndex][index],
-                    borderColor: g === "femme" ? "#D86060" : "#005B88"
-                });
-            });
-        } else if (level === "all") {
-            Object.keys(CATEGORY_MAP[gender]).forEach((l) => {
-                const index = CATEGORY_MAP[gender][l];
-                chart.data.datasets.push({
-                    label: `${gender} - ${l}`,
-                    data: DATASETS[datasetIndex][index],
-                    borderColor: gender === "femme" ? "#D86060" : "#005B88"
-                });
-            });
-        } else {
-            const index = CATEGORY_MAP[gender][level];
+    if (gender === "all" && level === "all") {
+        DATASETS[datasetIndex].forEach((data, i) => {
             chart.data.datasets.push({
-                label: `${gender} - ${level}`,
-                data: DATASETS[datasetIndex][index],
-                borderColor: gender === "femme" ? "#D86060" : "#005B88"
+                label: ORIGINAL_LABELS[i], // Réutilise le label d'origine
+                data: data,
+                borderColor: ORIGINAL_COLORS[i], // Réutilise la couleur d'origine
+                backgroundColor: ORIGINAL_COLORS[i] + "33" // Couleur transparente pour le remplissage (optionnel)
             });
-        }
-
-
-        chart.update();
+        });
+    } else if (gender === "all") {
+        Object.keys(CATEGORY_MAP).forEach((g) => {
+            const index = CATEGORY_MAP[g][level];
+            chart.data.datasets.push({
+                label: ORIGINAL_LABELS[index], // Réutilise le label d'origine
+                data: DATASETS[datasetIndex][index],
+                borderColor: ORIGINAL_COLORS[index], // Réutilise la couleur d'origine
+                backgroundColor: ORIGINAL_COLORS[index] + "33"
+            });
+        });
+    } else if (level === "all") {
+        Object.keys(CATEGORY_MAP[gender]).forEach((l) => {
+            const index = CATEGORY_MAP[gender][l];
+            chart.data.datasets.push({
+                label: ORIGINAL_LABELS[index], // Réutilise le label d'origine
+                data: DATASETS[datasetIndex][index],
+                borderColor: ORIGINAL_COLORS[index], // Réutilise la couleur d'origine
+                backgroundColor: ORIGINAL_COLORS[index] + "33"
+            });
+        });
+    } else {
+        const index = CATEGORY_MAP[gender][level];
+        chart.data.datasets.push({
+            label: ORIGINAL_LABELS[index], // Réutilise le label d'origine
+            data: DATASETS[datasetIndex][index],
+            borderColor: ORIGINAL_COLORS[index], // Réutilise la couleur d'origine
+            backgroundColor: ORIGINAL_COLORS[index] + "33"
+        });
     }
+
+    chart.update();
+}
+
 
 
     document.getElementById("data-select").addEventListener("change", updateChart);

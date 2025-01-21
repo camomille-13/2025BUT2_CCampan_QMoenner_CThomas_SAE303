@@ -17,8 +17,8 @@ h3 {
     border-bottom-right-radius: 0;
     color: white;
     padding: 8px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 1%;
+    padding-right: 2%;
 }
 
 #contexte {
@@ -326,6 +326,10 @@ p.map{
    margin-left: 10%;
     background-color: white;
     padding-right: 10%;
+<<<<<<< HEAD
     
     
+=======
+
+>>>>>>> 6360decc2890f2256298a02c0a1866a185acbe87
 }
