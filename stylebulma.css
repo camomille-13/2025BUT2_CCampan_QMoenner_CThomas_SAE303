@@ -36,5 +36,17 @@
     display: block;
 }
 
+.title{
+    padding: 5%;
+}
+
+#texte1{
+    padding-top: 5%;
+}
+
+body{
+    background-color: #F8F0F0;
+}
+
 /* title */
 
