@@ -184,16 +184,7 @@ img {
     width: 100%;
 }
 
-.image {
-    height: 10%;
-    background-color: #87B1C6;
-    margin: 0;
-    margin-bottom: 10%;
-    border-bottom-left-radius: 100%;
-    border-bottom-right-radius: 100%;
-    display: flex;
-    justify-content: center;
-}
+
 
 .image img {
 
