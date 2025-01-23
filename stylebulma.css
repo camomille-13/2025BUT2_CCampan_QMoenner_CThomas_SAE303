@@ -34,12 +34,10 @@
 
 .test2:hover .defaut {
     display: none;
-    line-height: 0.5;
 }
 
 .test2:hover .survol {
     display: block;
-    font-size: 20px;
 }
 
 .test3 .survol {
@@ -53,5 +51,4 @@
 
 .test3:hover .survol {
     display: block;
-    font-size: 20px;
 }
