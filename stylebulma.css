@@ -1,3 +1,6 @@
+image{
+    margin : auto; 
+}   
 
 /* --- Chiffres clés --- */ 
 
@@ -9,6 +12,7 @@
 
 #chiffres{
  padding-top : 25%;
+
 }
 #chiffres1{
     padding-top : 40%;
@@ -36,13 +40,9 @@
     display: block;
 }
 
-.title{
-    padding: 5%;
-}
 
-#texte1{
-    padding-top: 5%;
-}
+
+
 
 body{
     background-color: #F8F0F0;
@@ -56,6 +56,8 @@ body{
     padding-left: 2%;
     padding-bottom: 3%;
 }
+
+
 
 /* title */
 
