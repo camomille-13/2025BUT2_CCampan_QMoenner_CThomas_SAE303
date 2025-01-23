@@ -50,3 +50,35 @@ body{
 
 /* title */
 
+/* Media queries pour les petits écrans */
+@media (max-width: 768px) {
+    .title.is-1 {
+        font-size: 1.5rem;
+    }
+
+    .title.is-4 {
+        font-size: 0.8rem;
+    }
+
+    .cell {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title.is-1 {
+        font-size: 1.2rem;
+    }
+
+    .title.is-4 {
+        font-size: 0.7rem;
+    }
+
+    .cell {
+        padding: 10px;
+    }
+}
+
+
+
+
