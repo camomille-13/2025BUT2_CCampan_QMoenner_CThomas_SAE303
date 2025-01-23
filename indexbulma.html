@@ -10,7 +10,9 @@
 
     </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="stylebulma.css">
 </head>
+
 <body>
     <nav class="box " style="background-color: #87B1C6;">
         <img class="image
@@ -23,6 +25,40 @@
 
 
     <h1 class="title is-1">Chiffres clés</h1>
+
+    <div class="fixed-grid has-4-cols">
+        <div class="grid">
+            <div class="cell cell is-col-span-2 is-row-span-2" id="cell_camembert">
+                    <p class="title is-4 has-text-centered has-text-white" id="titre_camembert">Ecart de genre dans les études supérieures en Afghanistan</p>
+                    <canvas id="chartcam"></canvas>
+            </div>
+
+            <div class="cell is-col-span-2">
+                <span class="test">
+                    <p class="title is-1 has-text-centered has-text-white" id="chiffres">9 millions</p><span class="survol"><p class="title is-4 has-text-centered has-text-white">de filles en âge de fréquenter
+                        le cycle primaire n’entreront jamais dans une salle de classe</p>
+                    </span>
+                </span>  
+            </div>
+
+            <div class="cell">
+                <span class="test">
+                    <p class="title is-1 has-text-centered has-text-white " id="chiffres1">63%</p><span class="survol"><p class="title is-4 has-text-centered has-text-white">des adultes analphabètes dans le monde
+                        sont des femmes</p>
+                    </span>
+                </span>  
+                
+            </div>
+
+            <div class="cell">
+                <span class="test">
+                    <p class="title is-1 has-text-centered has-text-white"  id="chiffres1">59%</p><span class="survol"><p class="title is-4 has-text-centered has-text-white">des enfants arrêtent leurs études avant
+                        le lycée dans les pays à revenu faible</p>
+                    </span>
+                </span>  
+            </div>
+        </div>
+    </div>
 
 
     <div class="card">
@@ -56,6 +92,40 @@
 
 </body>
 <script>
+
+    //camembert
+
+    let ctxcam = document.getElementById('chartcam');
+
+    new Chart(ctxcam, {
+        type: 'pie',
+        data: {
+            labels: ["femme", "homme"],
+            datasets: [{
+                data: [27, 73],
+                backgroundColor: ['#FC9797', '#4A9DC7',],
+                borderWidth: 0,
+                hoverBackgroundColor: ['#D86060', '#005B88',],
+            }]
+        },
+
+        options: {
+            plugins: {
+                legend: {
+                    display: true,
+                    labels: {
+                        color: ['#ffffff'],
+                        font: {
+                            size: 20
+                        }
+                    }
+                }
+            }
+        },
+
+    });
+
+
 
 </script>
 </html>
