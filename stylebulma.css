@@ -52,3 +52,17 @@
 .test3:hover .survol {
     display: block;
 }
+
+.test4 .survol {
+    display: none;
+
+}
+
+.test4:hover .defaut {
+    display: none;
+}
+
+.test4:hover .survol {
+    display: block;
+}
+
