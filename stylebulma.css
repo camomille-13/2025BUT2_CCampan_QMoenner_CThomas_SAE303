@@ -48,6 +48,15 @@ body{
     background-color: #F8F0F0;
 }
 
+#source{
+    padding-left: 2%;
+}
+
+#credit{
+    padding-left: 2%;
+    padding-bottom: 3%;
+}
+
 /* title */
 
 /* Media queries pour les petits écrans */
