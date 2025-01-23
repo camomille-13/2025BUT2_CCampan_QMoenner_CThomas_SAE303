@@ -1,6 +1,7 @@
 select {
     font-size:1.2rem;
-    padding:8%;
+    padding:2%;
+    width : 30%;
     border : none;
     background-color: #FC9797;
     color: #FFFFFF;
@@ -26,7 +27,7 @@ option {
 
 body {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
     align-items: flex-start;
     padding: 5%;
@@ -36,28 +37,23 @@ body {
 
 
 canvas{
-    flex: 3; 
-    max-width:70%;
-    max-height:100%; 
-    background-color: #ffffff;
+    flex: 3;  
     border-radius: 10px;
-
 }
 
 .filters-container {
-   margin-top : 9%;
+   margin-top : 3%;
     flex: 1;
     display: flex;
     gap : 2%;
-    flex-direction: column;
-    background-color: none;
-    padding: 3%;
-    max-width: 100%; 
+    flex-direction: row;
+    padding: 1%;
 }
 
 .item{
     display: flex; 
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .filters-container select {
@@ -65,16 +61,4 @@ canvas{
     -webkit-appearance: none;
     -moz-appearance: none;
 
-}
-
-h2{
-    color : white;
-    padding-left : 2%;
-}
-
-.disparite{
-    background-color: #87B1C6;
-    border-radius: 20px;
-    padding-bottom : 2%;
-    padding-left : 2%;
 }
