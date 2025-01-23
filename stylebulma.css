@@ -23,17 +23,16 @@
 }
 
 
-.test2 .survol {
+.test .survol {
     display: none;
 
 }
 
-.test2:hover .defaut {
+.test:hover .defaut {
     display: none;
-    line-height: 0.5;
 }
 
-.test2:hover .survol {
+.test:hover .survol {
     display: block;
-    font-size: 20px;
 }
+
